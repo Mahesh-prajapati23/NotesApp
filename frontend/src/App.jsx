@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { useContext } from 'react';
 import UserContext from './context/UserContext';
 import ViewSingle from './components/ViewSingle';
+import Uploader from './pages/Uploader';
 function App() {
   let ctx = useContext(UserContext)
   let loginValue = ctx.details.login
