@@ -52,17 +52,22 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <h1>Home page</h1>
-      <button onClick={ ()=>setClicked(true)}>create</button>
+  <>
+    <div className='text-center my-3'>
+    <button onClick={ ()=>setClicked(true)} className='bg-success text-white border-success border rounded'>create</button>
+    </div>
+    <div className='text-center border border-success h-screen'>
+      {/* <h1>Home page</h1> */}
+      
      { clicked && <form action="">
         <label htmlFor="">Title</label>
-        <input ref={titleRef} type="text" />
+        <input ref={titleRef} type="text" /><br /><br />
         <label htmlFor="">Description</label>
-        <textarea ref={decRef} name="" id=""></textarea>
+        <textarea ref={decRef} name="" id=""></textarea><br /><br />
         <label className='btn btn-primary' htmlFor="file">Upload image</label>
         <input onChange={handleChanger} id='file' type="file"  hidden/>
        {finalImage && <img height={200} width={200} src={finalImage} alt="" />}
+       <br /><br />
 
         {/* <label htmlFor="b">Male</label>
         <input type="radio"  id='b'/>
@@ -70,12 +75,15 @@ const Home = () => {
         <input type="radio" id='a'/> */}
 
        
-        <button onClick={handleFormSUbmit}>submit</button>
+        <button className='btn btn-danger' onClick={handleFormSUbmit}>submit</button>
       </form>}
       
-      <ShowUserNotes value = {value} setValue={setValue} id={ctx.details.userId}/>
+      
     </div>
-    
+    <div>
+    <ShowUserNotes value = {value} setValue={setValue} id={ctx.details.userId}/>
+    </div>
+    </>
   )
 }
 

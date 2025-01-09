@@ -25,6 +25,9 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
        {login===true  && <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/">Create</Link>
+        </li>}
+       {login===true  && <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>}
         {login===false && <li className="nav-item btn btn-info mx-2">
@@ -52,3 +55,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
